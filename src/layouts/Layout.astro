@@ -15,6 +15,9 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -46,7 +49,7 @@ const {
         </div>
       </div>
 
-      <main id="content" class="mx-auto w-full max-w-5xl px-5 py-10 sm:px-8 sm:py-14">
+      <main id="content" class="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
         <slot />
       </main>
       <footer class="border-t border-[rgba(var(--border),0.7)]">

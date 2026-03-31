@@ -4,59 +4,87 @@ import Layout from '../layouts/Layout.astro';
 const profile = {
   name: 'Swapnil Khalekar',
   title: 'AI Product Manager',
+  eyebrow: 'AI products · platform modernization · outcome-led execution',
   headline: 'AI Product Manager building RAG + agentic systems that ship—and scale.',
   summary:
-    '10+ years across enterprise SaaS, FinTech and AI automation. I lead customer-centric product execution—from discovery to delivery—specializing in RAG/agentic AI, platform modernization, and measurable outcomes.',
+    '10+ years across enterprise SaaS, FinTech, and AI automation—leading product discovery, platform modernization, and production-grade AI execution with measurable outcomes.',
   email: 'swapnibk@gmail.com',
-  linkedinUrl: 'https://www.linkedin.com/in/swapnil-khalekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+  linkedinUrl:
+    'https://www.linkedin.com/in/swapnil-khalekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
   githubUrl: 'https://github.com/interstellarswapnil-eng',
   cvUrl: '/cv.pdf',
 };
 
-const impact = [
-  {
-    metric: '80%',
-    label: 'fewer missed automation opportunities',
-    context: 'Historical-invoice analysis automation (~90% accuracy).',
-  },
+const featuredImpact = {
+  metric: '80%',
+  label: 'fewer missed automation opportunities',
+  context:
+    'Built a historical-invoice analysis mechanism delivering ~90% accuracy in identifying automation opportunities.',
+  company: 'Wolters Kluwer',
+};
+
+const supportImpact = [
   {
     metric: '~5%',
     label: 'better invoice recognition & supplier identification',
-    context: 'AI invoice processing improvements (Wolters Kluwer).',
+    context: 'AI invoice processing improvements.',
   },
   {
     metric: '~25% YoY',
     label: 'inventory growth',
-    context: 'OTA integrations expanding Homelike supply.',
+    context: 'OTA integrations expanding platform supply at Homelike.',
   },
   {
     metric: '~15%',
     label: 'occupancy lift',
-    context: 'A/B-tested listing + promotions improvements.',
+    context: 'A/B-tested listing and promotions improvements.',
   },
   {
     metric: '~20%',
     label: 'operating cost reduction',
-    context: 'Migration prioritization using runtime + SQL performance analysis.',
+    context: 'Runtime + SQL-guided modernization prioritization.',
   },
 ];
 
-const focus = [
+const pillars = [
   {
     title: 'RAG',
-    desc: 'Retrieval strategies, evaluation, and production-ready knowledge experiences.',
+    desc: 'Retrieval strategies, evaluation loops, and production-ready knowledge experiences designed for reliability—not demo theater.',
   },
   {
     title: 'Agentic AI',
-    desc: 'Workflow automation with guardrails, reliability, and ROI.',
+    desc: 'Workflow automation with guardrails, measurable ROI, and enough realism to survive contact with actual operations.',
   },
   {
     title: 'Platform modernization',
-    desc: 'API-first systems, microservices transitions, and scalable delivery.',
+    desc: 'API-first architecture, service boundaries, integrations, and scalable delivery across legacy-to-modern transitions.',
   },
   {
     title: 'Product thinking',
-    desc: 'Customer-first discovery, strong prioritization, and measurable outcomes.',
+    desc: 'Customer-first discovery, prioritization discipline, and outcome-driven execution across design, engineering, and business teams.',
+  },
+];
+
+const operatingModel = [
+  {
+    step: '01',
+    title: 'Find the real problem',
+    desc: 'Start with user pain, workflow bottlenecks, and business stakes—not feature wishlists pretending to be strategy.',
+  },
+  {
+    step: '02',
+    title: 'Frame the right bets',
+    desc: 'Translate ambiguity into product bets, clear scope, and prioritization logic teams can actually execute against.',
+  },
+  {
+    step: '03',
+    title: 'Ship with engineering realism',
+    desc: 'Work across APIs, data models, platform constraints, and delivery tradeoffs so the roadmap survives implementation.',
+  },
+  {
+    step: '04',
+    title: 'Measure outcomes, not activity',
+    desc: 'Track improvements in accuracy, growth, efficiency, or adoption—the stuff that matters after the sprint theatre ends.',
   },
 ];
 
@@ -66,10 +94,11 @@ const experience = [
     role: 'Senior Agile Product Owner',
     dates: 'Sep 2023 — Present',
     location: 'Pune, India',
+    tags: ['AI Automation', 'FinTech', 'Platform Scale'],
     highlights: [
-      'AI invoice automation improvements (~5% recognition; ~5% processing time reduction).',
-      'Historical-invoice driven automation (80% fewer missed opportunities; ~90% accuracy).',
-      'PEPPOL integration backlog for EU e-invoicing compliance.',
+      'Improved invoice recognition and supplier identification by ~5% by shaping AI-powered invoice automation with data science, UX, and domain experts.',
+      'Built a historical-invoice driven automation mechanism that reduced lost opportunities by 80% with ~90% accuracy.',
+      'Defined the PEPPOL integration backlog for EU e-invoicing readiness while driving microservices and platform scalability work.',
     ],
   },
   {
@@ -77,10 +106,11 @@ const experience = [
     role: 'Product Owner',
     dates: 'Aug 2021 — Aug 2023',
     location: 'Cologne, Germany',
+    tags: ['Growth', 'Experimentation', 'Integrations'],
     highlights: [
-      'OTA integrations driving ~25% YoY supply growth.',
-      'A/B experiments improving occupancy ~15%.',
-      'OKRs + cross-functional alignment for scale.',
+      'Expanded property supply by ~25% YoY through third-party OTA integrations and cross-team delivery coordination.',
+      'Improved landlord occupancy by ~15% via A/B-tested listing and promotions changes grounded in experiment metrics.',
+      'Used OKRs and stakeholder alignment rituals to keep growth initiatives commercially sharp and executionally sane.',
     ],
   },
   {
@@ -88,9 +118,10 @@ const experience = [
     role: 'Senior Business Analyst (Product Owner Proxy)',
     dates: 'Feb 2020 — Aug 2021',
     location: 'Pune, India',
+    tags: ['Connected Services', 'Automotive', 'Cross-geo Delivery'],
     highlights: [
-      'Owned backlog/requirements for Daimler MBOS connected services.',
-      'Facilitated cross-geo planning and alignment (India ↔ Germany).',
+      'Owned requirements and prioritization for Daimler MB.OS connected services across distributed India and Germany teams.',
+      'Ran planning, backlog refinement, and decision forums that improved alignment across squads and stakeholders.',
     ],
   },
   {
@@ -98,19 +129,23 @@ const experience = [
     role: 'Business Analyst (Product Owner Proxy)',
     dates: 'Feb 2019 — Jan 2020',
     location: 'Pune, India',
-    highlights: ['Led microservices modernization; ~20% operating cost reduction.'],
+    tags: ['Modernization', 'Microservices', 'Mortgage Tech'],
+    highlights: [
+      'Led modernization planning for a legacy mortgage origination platform, using runtime analysis and SQL insight to prioritize migration bets.',
+      'Contributed to ~20% operating cost reduction while improving resilience and scalability through service-based architecture.',
+    ],
   },
 ];
 
 const earlier = [
-  'SEED Infotech / CRIF — Business Analyst (Contractor) (Jul 2018 — Dec 2018)',
-  'Exxat Systems — Business Analyst (Aug 2016 — Jul 2018)',
-  'BlitzCode Systems — Business Analyst (Aug 2014 — Aug 2016)',
+  'SEED Infotech / CRIF — Business Analyst (Contractor) · Jul 2018 — Dec 2018',
+  'Exxat Systems — Business Analyst · Aug 2016 — Jul 2018',
+  'BlitzCode Systems — Business Analyst · Aug 2014 — Aug 2016',
 ];
 
-const skills = [
+const skillGroups = [
   {
-    group: 'Product',
+    group: 'Product leadership',
     items: ['Vision', 'Roadmaps', 'Outcomes', 'Stakeholder management'],
   },
   {
@@ -131,32 +166,40 @@ const skills = [
   },
 ];
 
-const certs = [
-  'CSPO',
-  'SAFe® 6 POPM',
-  'Product Space AI PM program: Top Performer + Demo Day winner',
+const certifications = [
+  'Certified Scrum Product Owner (CSPO)',
+  'SAFe® 6 Product Owner / Product Manager',
+  'Product Space AI PM program — Top Performer + Demo Day winner',
 ];
 
-const projects = [
+const platforms = [
   {
-    title: "Wolters Kluwer — Basecone",
-    desc: "Platform context for AI-powered invoice automation and e-invoicing workflows.",
-    href: "https://www.wolterskluwer.com/en/solutions/basecone",
+    title: 'Basecone',
+    org: 'Wolters Kluwer',
+    label: 'AI / FinTech / Workflow Automation',
+    desc: 'Public product context for invoice automation, accounting workflows, and e-invoicing platform capabilities.',
+    href: 'https://www.wolterskluwer.com/en/solutions/basecone',
   },
   {
-    title: "Capita — Mortgage Origination Platform",
-    desc: "Legacy-to-microservices modernization context for a mortgage origination system.",
-    href: "https://www.capita.com/what-we-do/industries/financial-services/mortgage-origination-platform",
+    title: 'Mortgage Origination Platform',
+    org: 'Capita',
+    label: 'Platform Modernization / Financial Services',
+    desc: 'Public platform context for mortgage origination workflows and modernization-relevant domain background.',
+    href: 'https://www.capita.com/what-we-do/industries/financial-services/mortgage-origination-platform',
   },
   {
-    title: "Mercedes-Benz — MB.OS",
-    desc: "Connected services platform context (backlog, requirements, cross-geo delivery).",
-    href: "https://group.mercedes-benz.com/technology/digitalisation/operating-system/mb-os.html",
+    title: 'MB.OS',
+    org: 'Mercedes-Benz',
+    label: 'Connected Services / Automotive',
+    desc: 'Public platform context for connected services and the operating system ecosystem around Mercedes-Benz vehicles.',
+    href: 'https://group.mercedes-benz.com/technology/digitalisation/operating-system/mb-os.html',
   },
   {
-    title: "CRIF High Mark — Credit Bureau",
-    desc: "Credit bureau platform context (workflow automation, data correction).",
-    href: "https://www.crifhighmark.com/",
+    title: 'Credit Bureau Platform',
+    org: 'CRIF High Mark',
+    label: 'Credit Data / Workflow Systems',
+    desc: 'Public company/platform context for credit bureau workflows and enterprise data operations.',
+    href: 'https://www.crifhighmark.com/',
   },
 ];
 ---
@@ -165,208 +208,330 @@ const projects = [
   title="Swapnil Khalekar — AI Product Manager (RAG, Agentic AI, Platform Modernization)"
   description="AI Product Manager building RAG + agentic systems that ship—and scale."
 >
-  <section class="grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
-    <div class="space-y-5">
-      <div class="space-y-2">
-        <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">
-          {profile.name}
-        </h1>
-        <p class="text-[rgb(var(--muted))]">
-          <span class="rounded-full border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.4)] px-3 py-1 text-sm">{profile.title}</span>
-        </p>
-      </div>
+  <section class="relative overflow-hidden rounded-[2rem] border border-[rgba(var(--border),0.65)] bg-[linear-gradient(135deg,rgba(var(--card),0.86),rgba(var(--card),0.42))] px-6 py-8 shadow-[0_30px_120px_rgba(0,0,0,0.28)] sm:px-10 sm:py-12">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(var(--accent),0.22),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(124,58,237,0.14),transparent_28%)]"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[linear-gradient(transparent,rgba(var(--accent),0.06),transparent)] blur-3xl lg:block"></div>
 
-      <p class="text-lg leading-relaxed text-[rgb(var(--fg))] sm:text-xl">
-        {profile.headline}
-      </p>
-      <p class="max-w-2xl leading-relaxed text-[rgb(var(--muted))]">{profile.summary}</p>
-
-      <div class="flex flex-wrap gap-3 pt-2">
-        <a
-          class="inline-flex items-center justify-center rounded-md bg-teal-500 px-4 py-2 text-sm font-medium text-zinc-950 ring-1 ring-teal-400/40 transition hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
-          href={`mailto:${profile.email}`}
-        >
-          Email me
-        </a>
-        <a
-          class="inline-flex items-center justify-center rounded-md border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.30)] px-4 py-2 text-sm font-medium text-[rgb(var(--fg))] transition hover:bg-[rgba(var(--card),0.60)] focus:outline-none focus:ring-2 focus:ring-teal-300"
-          href={profile.linkedinUrl}
-        >
-          LinkedIn
-        </a>
-        <a
-          class="inline-flex items-center justify-center rounded-md border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.30)] px-4 py-2 text-sm font-medium text-[rgb(var(--fg))] transition hover:bg-[rgba(var(--card),0.60)] focus:outline-none focus:ring-2 focus:ring-teal-300"
-          href={profile.githubUrl}
-        >
-          GitHub
-        </a>
-        <a
-          class="inline-flex items-center justify-center rounded-md border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.30)] px-4 py-2 text-sm font-medium text-[rgb(var(--fg))] transition hover:bg-[rgba(var(--card),0.60)] focus:outline-none focus:ring-2 focus:ring-teal-300"
-          href={profile.cvUrl}
-          download
-        >
-          Download CV
-        </a>
-      </div>
-
-      <p class="text-xs text-[rgb(var(--fg))]0">
-        Selected highlights below are approximate where marked (~).
-      </p>
-    </div>
-
-    <div class="sm:pt-2">
-      <img
-        src="/headshot.jpg"
-        alt="Headshot of Swapnil Khalekar"
-        class="h-28 w-28 rounded-2xl border border-[rgba(var(--border),0.8)] object-cover shadow-sm shadow-black/20 sm:h-36 sm:w-36"
-        loading="eager"
-        decoding="async"
-      />
-    </div>
-  </section>
-
-  <div class="my-10 h-px w-full bg-zinc-800/70" />
-
-  <section aria-label="Impact" class="space-y-4">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-[rgb(var(--muted))]">Impact</h2>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {impact.map((c) => (
-        <div class="rounded-xl border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.25)] p-4">
-          <div class="text-2xl font-semibold tracking-tight text-[rgb(var(--fg))]">{c.metric}</div>
-          <div class="mt-1 text-sm text-[rgba(var(--fg),0.9)]">{c.label}</div>
-          <div class="mt-2 text-xs leading-relaxed text-[rgba(var(--muted),0.95)]">{c.context}</div>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <div class="my-10 h-px w-full bg-zinc-800/70" />
-
-  <section aria-label="Focus areas" class="space-y-4">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-[rgb(var(--muted))]">Focus</h2>
-    <div class="grid gap-4 sm:grid-cols-2">
-      {focus.map((f) => (
-        <div class="rounded-xl border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.25)] p-4">
-          <div class="text-sm font-semibold text-[rgb(var(--fg))]">{f.title}</div>
-          <div class="mt-2 text-sm leading-relaxed text-[rgba(var(--muted),0.95)]">{f.desc}</div>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <div class="my-10 h-px w-full bg-zinc-800/70" />
-
-  <section aria-label="Experience" class="space-y-4">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-[rgb(var(--muted))]">Experience</h2>
-    <div class="space-y-4">
-      {experience.map((e) => (
-        <div class="rounded-xl border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.25)] p-4">
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <div class="text-sm font-semibold text-[rgb(var(--fg))]">
-              {e.company} · <span class="text-[rgb(var(--muted))]">{e.role}</span>
-            </div>
-            <div class="text-xs text-[rgba(var(--muted),0.95)]">{e.dates} · {e.location}</div>
+    <div class="relative grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
+      <div class="space-y-7">
+        <div class="space-y-4">
+          <div class="inline-flex items-center gap-2 rounded-full border border-[rgba(var(--border),0.7)] bg-[rgba(var(--bg),0.28)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[rgb(var(--muted))]">
+            <span class="h-2 w-2 rounded-full bg-[rgb(var(--accent))]"></span>
+            {profile.eyebrow}
           </div>
-          <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-[rgb(var(--muted))]">
-            {e.highlights.map((h) => (
-              <li>{h}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
 
-      <details class="rounded-xl border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.25)] p-4">
-        <summary class="cursor-pointer text-sm font-medium text-[rgba(var(--fg),0.9)]">Earlier roles</summary>
-        <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-[rgba(var(--muted),0.95)]">
-          {earlier.map((r) => (
-            <li>{r}</li>
-          ))}
-        </ul>
-      </details>
-    </div>
-  </section>
-
-  <div class="my-10 h-px w-full bg-zinc-800/70" />
-
-  <section aria-label="Skills" class="space-y-4">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-[rgb(var(--muted))]">Skills & toolset</h2>
-    <div class="grid gap-4 sm:grid-cols-2">
-      {skills.map((s) => (
-        <div class="rounded-xl border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.25)] p-4">
-          <div class="text-sm font-semibold text-[rgb(var(--fg))]">{s.group}</div>
-          <div class="mt-2 flex flex-wrap gap-2">
-            {s.items.map((it) => (
-              <span class="rounded-full border border-[rgba(var(--border),0.8)] bg-[rgba(var(--bg),0.30)] px-3 py-1 text-xs text-[rgb(var(--muted))]">{it}</span>
-            ))}
+          <div class="space-y-4">
+            <p class="text-sm uppercase tracking-[0.25em] text-[rgb(var(--muted))]">{profile.title}</p>
+            <h1 class="max-w-4xl text-4xl font-semibold tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+              AI Product Manager building <span class="font-display italic text-[rgb(var(--accent))]">RAG + agentic systems</span> that ship—and scale.
+            </h1>
+            <p class="max-w-2xl text-base leading-8 text-[rgb(var(--muted))] sm:text-lg">
+              {profile.summary}
+            </p>
           </div>
         </div>
-      ))}
-    </div>
-  </section>
 
-  <div class="my-10 h-px w-full bg-zinc-800/70" />
-
-  <section aria-label="Projects" class="space-y-4">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-[rgb(var(--muted))]">Projects / platforms</h2>
-    <div class="grid gap-4 sm:grid-cols-2">
-      {projects.map((p) => (
-        <a
-          class="group rounded-xl border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.25)] p-4 transition hover:bg-[rgba(var(--card),0.45)] focus:outline-none focus:ring-2 focus:ring-teal-300"
-          href={p.href}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="flex items-start justify-between gap-4">
-            <div class="text-sm font-semibold text-[rgb(var(--fg))] group-hover:text-[rgb(var(--fg))]">{p.title}</div>
-            <div class="text-xs text-[rgb(var(--fg))]0">↗</div>
-          </div>
-          <div class="mt-2 text-sm leading-relaxed text-[rgba(var(--muted),0.95)]">{p.desc}</div>
-          <div class="mt-3 text-xs text-teal-300/90 underline decoration-teal-400/40 underline-offset-4 group-hover:text-teal-200">
-            View
-          </div>
-        </a>
-      ))}
-    </div>
-    <p class="text-xs text-[rgb(var(--fg))]0">
-      Links above point to public product/platform pages for context.
-    </p>
-  </section>
-
-  <div class="my-10 h-px w-full bg-zinc-800/70" />
-
-  <section aria-label="Certifications" class="space-y-4">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-[rgb(var(--muted))]">Certifications & recognition</h2>
-    <ul class="list-disc space-y-1 pl-5 text-sm text-[rgb(var(--muted))]">
-      {certs.map((c) => (
-        <li>{c}</li>
-      ))}
-    </ul>
-  </section>
-
-  <div class="my-10 h-px w-full bg-zinc-800/70" />
-
-  <section aria-label="Contact" class="space-y-4">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-[rgb(var(--muted))]">Contact</h2>
-    <div class="rounded-xl border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.25)] p-5">
-      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div class="text-sm text-[rgb(var(--muted))]">
-          Best way to reach me: <span class="text-[rgb(var(--fg))]">email</span>.
-        </div>
         <div class="flex flex-wrap gap-3">
           <a
-            class="inline-flex items-center justify-center rounded-md bg-teal-500 px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
+            class="inline-flex items-center justify-center rounded-full bg-[rgb(var(--accent))] px-5 py-3 text-sm font-semibold text-zinc-950 transition duration-200 hover:translate-y-[-1px] hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]"
             href={`mailto:${profile.email}`}
           >
-            Email me
+            Email Swapnil
           </a>
           <a
-            class="inline-flex items-center justify-center rounded-md border border-[rgba(var(--border),0.8)] bg-[rgba(var(--card),0.30)] px-4 py-2 text-sm font-medium text-[rgb(var(--fg))] transition hover:bg-[rgba(var(--card),0.60)] focus:outline-none focus:ring-2 focus:ring-teal-300"
+            class="inline-flex items-center justify-center rounded-full border border-[rgba(var(--border),0.75)] bg-[rgba(var(--bg),0.28)] px-5 py-3 text-sm font-medium transition duration-200 hover:border-[rgba(var(--accent),0.4)] hover:bg-[rgba(var(--card),0.7)] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]"
+            href={profile.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            class="inline-flex items-center justify-center rounded-full border border-[rgba(var(--border),0.75)] bg-[rgba(var(--bg),0.28)] px-5 py-3 text-sm font-medium transition duration-200 hover:border-[rgba(var(--accent),0.4)] hover:bg-[rgba(var(--card),0.7)] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]"
+            href={profile.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center justify-center rounded-full border border-[rgba(var(--border),0.75)] bg-[rgba(var(--bg),0.28)] px-5 py-3 text-sm font-medium transition duration-200 hover:border-[rgba(var(--accent),0.4)] hover:bg-[rgba(var(--card),0.7)] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]"
             href={profile.cvUrl}
             download
           >
             Download CV
           </a>
         </div>
+
+        <div class="grid gap-3 sm:grid-cols-3">
+          <div class="rounded-2xl border border-[rgba(var(--border),0.7)] bg-[rgba(var(--bg),0.24)] p-4 backdrop-blur">
+            <div class="text-2xl font-semibold tracking-tight">10+</div>
+            <div class="mt-1 text-sm text-[rgb(var(--muted))]">years across enterprise SaaS, FinTech, and AI automation</div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(var(--border),0.7)] bg-[rgba(var(--bg),0.24)] p-4 backdrop-blur">
+            <div class="text-2xl font-semibold tracking-tight">100+</div>
+            <div class="mt-1 text-sm text-[rgb(var(--muted))]">product releases across multiple domains and markets</div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(var(--border),0.7)] bg-[rgba(var(--bg),0.24)] p-4 backdrop-blur">
+            <div class="text-2xl font-semibold tracking-tight">Global</div>
+            <div class="mt-1 text-sm text-[rgb(var(--muted))]">delivery experience across India and European teams</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -right-2 top-10 hidden h-28 w-28 rounded-full bg-[rgba(var(--accent),0.22)] blur-3xl sm:block"></div>
+        <div class="absolute -left-6 bottom-10 hidden h-20 w-20 rounded-full bg-[rgba(124,58,237,0.18)] blur-3xl sm:block"></div>
+
+        <div class="relative mx-auto max-w-sm">
+          <div class="rounded-[2rem] border border-[rgba(var(--border),0.72)] bg-[linear-gradient(180deg,rgba(var(--bg),0.18),rgba(var(--card),0.62))] p-4 shadow-[0_25px_60px_rgba(0,0,0,0.35)]">
+            <div class="rounded-[1.6rem] border border-[rgba(var(--border),0.6)] bg-[rgba(var(--bg),0.24)] p-3">
+              <img
+                src="/headshot.jpg"
+                alt="Headshot of Swapnil Khalekar"
+                class="aspect-[4/5] w-full rounded-[1.25rem] object-cover"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <div class="absolute -left-8 top-8 max-w-[14rem] rounded-2xl border border-[rgba(var(--border),0.72)] bg-[rgba(var(--card),0.85)] px-4 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.25)] backdrop-blur">
+            <div class="text-2xl font-semibold tracking-tight text-[rgb(var(--accent))]">80%</div>
+            <div class="mt-1 text-sm text-[rgba(var(--fg),0.9)]">fewer missed automation opportunities</div>
+          </div>
+
+          <div class="absolute -right-5 bottom-10 max-w-[13rem] rounded-2xl border border-[rgba(var(--border),0.72)] bg-[rgba(var(--card),0.85)] px-4 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.25)] backdrop-blur">
+            <div class="text-xl font-semibold tracking-tight">~25% YoY</div>
+            <div class="mt-1 text-sm text-[rgb(var(--muted))]">inventory growth through OTA integrations</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <section class="mt-8 grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
+    <div class="rounded-[1.75rem] border border-[rgba(var(--border),0.65)] bg-[linear-gradient(180deg,rgba(var(--card),0.72),rgba(var(--card),0.38))] p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-[rgb(var(--muted))]">Selected outcome</p>
+          <div class="mt-4 text-5xl font-semibold tracking-[-0.05em] text-[rgb(var(--accent))] sm:text-6xl">{featuredImpact.metric}</div>
+          <h2 class="mt-3 max-w-md text-2xl font-semibold tracking-tight sm:text-3xl">{featuredImpact.label}</h2>
+          <p class="mt-4 max-w-2xl text-sm leading-7 text-[rgb(var(--muted))] sm:text-base">{featuredImpact.context}</p>
+        </div>
+        <div class="hidden rounded-full border border-[rgba(var(--border),0.65)] px-3 py-1 text-xs text-[rgb(var(--muted))] sm:block">
+          {featuredImpact.company}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+      {supportImpact.map((item) => (
+        <div class="rounded-[1.5rem] border border-[rgba(var(--border),0.65)] bg-[rgba(var(--card),0.42)] p-5 transition duration-200 hover:translate-y-[-2px] hover:border-[rgba(var(--accent),0.26)]">
+          <div class="text-2xl font-semibold tracking-tight">{item.metric}</div>
+          <div class="mt-1 text-sm font-medium text-[rgba(var(--fg),0.92)]">{item.label}</div>
+          <div class="mt-2 text-sm leading-6 text-[rgb(var(--muted))]">{item.context}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-24 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-[rgb(var(--muted))]">Known for</p>
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Building AI products with operational teeth.</h2>
+      <p class="max-w-xl text-base leading-8 text-[rgb(var(--muted))]">
+        The interesting part is not shipping a demo. It is translating AI capability into workflows, systems, and decisions that survive real users, real scale, and real constraints.
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {pillars.map((pillar) => (
+        <div class="group rounded-[1.75rem] border border-[rgba(var(--border),0.65)] bg-[linear-gradient(180deg,rgba(var(--card),0.7),rgba(var(--card),0.36))] p-6 transition duration-200 hover:border-[rgba(var(--accent),0.28)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.18)]">
+          <div class="mb-5 h-1 w-16 rounded-full bg-[rgba(var(--accent),0.75)]"></div>
+          <h3 class="text-xl font-semibold tracking-tight">{pillar.title}</h3>
+          <p class="mt-3 text-sm leading-7 text-[rgb(var(--muted))]">{pillar.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-24 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-[rgb(var(--muted))]">Operating model</p>
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">How I work when the problem is messy and the stakes are real.</h2>
+      <p class="max-w-xl text-base leading-8 text-[rgb(var(--muted))]">
+        Product leaders do not need another person who can write tickets. They need someone who can convert ambiguity into execution without losing the commercial plot.
+      </p>
+    </div>
+
+    <div class="grid gap-4">
+      {operatingModel.map((item) => (
+        <div class="grid gap-4 rounded-[1.5rem] border border-[rgba(var(--border),0.65)] bg-[rgba(var(--card),0.42)] p-5 sm:grid-cols-[auto_1fr] sm:items-start sm:p-6">
+          <div class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(var(--border),0.7)] bg-[rgba(var(--bg),0.3)] text-sm font-semibold text-[rgb(var(--accent))]">
+            {item.step}
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold tracking-tight">{item.title}</h3>
+            <p class="mt-2 text-sm leading-7 text-[rgb(var(--muted))]">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-24 grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-[rgb(var(--muted))]">Experience</p>
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">A progression across AI, growth, platform scale, and modernization.</h2>
+      <p class="max-w-xl text-base leading-8 text-[rgb(var(--muted))]">
+        The pattern across roles is pretty consistent: find leverage, remove ambiguity, and build products that create measurable value instead of prettier dashboards for status meetings.
+      </p>
+    </div>
+
+    <div class="space-y-6 border-l border-[rgba(var(--border),0.65)] pl-6">
+      {experience.map((item) => (
+        <article class="relative rounded-[1.5rem] border border-[rgba(var(--border),0.65)] bg-[rgba(var(--card),0.4)] p-6">
+          <div class="absolute -left-[2.05rem] top-8 h-4 w-4 rounded-full border border-[rgba(var(--border),0.7)] bg-[rgb(var(--accent))]"></div>
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <div class="text-xs uppercase tracking-[0.22em] text-[rgb(var(--muted))]">{item.dates}</div>
+              <h3 class="mt-2 text-xl font-semibold tracking-tight">{item.company}</h3>
+              <p class="mt-1 text-sm text-[rgba(var(--fg),0.92)]">{item.role} · {item.location}</p>
+            </div>
+            <div class="flex flex-wrap gap-2 sm:max-w-[16rem] sm:justify-end">
+              {item.tags.map((tag) => (
+                <span class="rounded-full border border-[rgba(var(--border),0.65)] bg-[rgba(var(--bg),0.3)] px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-[rgb(var(--muted))]">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <ul class="mt-5 space-y-3 text-sm leading-7 text-[rgb(var(--muted))]">
+            {item.highlights.map((highlight) => (
+              <li class="flex gap-3">
+                <span class="mt-[0.7rem] h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]"></span>
+                <span>{highlight}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+
+      <details class="rounded-[1.5rem] border border-[rgba(var(--border),0.65)] bg-[rgba(var(--card),0.38)] p-6">
+        <summary class="cursor-pointer list-none text-sm font-semibold uppercase tracking-[0.16em] text-[rgba(var(--fg),0.9)]">
+          Earlier roles
+        </summary>
+        <ul class="mt-4 space-y-2 text-sm leading-7 text-[rgb(var(--muted))]">
+          {earlier.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <section class="mt-24 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-[rgb(var(--muted))]">Capability stack</p>
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Breadth where it helps. Depth where it matters.</h2>
+      <p class="max-w-xl text-base leading-8 text-[rgb(var(--muted))]">
+        Enough product, AI, platform, and delivery fluency to make strategy executable—not just presentable in a polished roadmap deck.
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {skillGroups.map((group) => (
+        <div class="rounded-[1.5rem] border border-[rgba(var(--border),0.65)] bg-[rgba(var(--card),0.42)] p-5">
+          <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-[rgba(var(--fg),0.92)]">{group.group}</h3>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {group.items.map((item) => (
+              <span class="rounded-full border border-[rgba(var(--border),0.65)] bg-[rgba(var(--bg),0.3)] px-3 py-1.5 text-xs text-[rgb(var(--muted))]">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-24 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-[rgb(var(--muted))]">Platforms I’ve helped shape</p>
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Selected public product context across AI, platform modernization, and connected systems.</h2>
+      <p class="max-w-xl text-base leading-8 text-[rgb(var(--muted))]">
+        These links point to public product or company pages for context. They are not case studies—but they help anchor the domains, platform surfaces, and complexity levels behind the work.
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {platforms.map((platform) => (
+        <a
+          class="group rounded-[1.6rem] border border-[rgba(var(--border),0.65)] bg-[linear-gradient(180deg,rgba(var(--card),0.72),rgba(var(--card),0.35))] p-6 transition duration-200 hover:translate-y-[-2px] hover:border-[rgba(var(--accent),0.28)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.18)] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]"
+          href={platform.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))]">{platform.org}</p>
+              <h3 class="mt-2 text-xl font-semibold tracking-tight">{platform.title}</h3>
+            </div>
+            <span class="text-sm text-[rgb(var(--muted))] transition group-hover:text-[rgb(var(--accent))]">↗</span>
+          </div>
+          <div class="mt-4 inline-flex rounded-full border border-[rgba(var(--border),0.65)] bg-[rgba(var(--bg),0.28)] px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-[rgb(var(--muted))]">
+            {platform.label}
+          </div>
+          <p class="mt-4 text-sm leading-7 text-[rgb(var(--muted))]">{platform.desc}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-24 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-[rgb(var(--muted))]">Credentials</p>
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Certifications and recognition that support the work—not replace it.</h2>
+    </div>
+
+    <div class="grid gap-4">
+      {certifications.map((cert) => (
+        <div class="rounded-[1.4rem] border border-[rgba(var(--border),0.65)] bg-[rgba(var(--card),0.4)] p-5 text-sm leading-7 text-[rgba(var(--fg),0.92)]">
+          {cert}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-24 rounded-[2rem] border border-[rgba(var(--border),0.65)] bg-[linear-gradient(135deg,rgba(var(--card),0.84),rgba(var(--card),0.46))] px-6 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.18)] sm:px-10 sm:py-10">
+    <div class="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+      <div>
+        <p class="text-xs uppercase tracking-[0.25em] text-[rgb(var(--muted))]">Contact</p>
+        <h2 class="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
+          If you’re building AI products that need to move from promise to production, let’s talk.
+        </h2>
+        <p class="mt-4 max-w-2xl text-base leading-8 text-[rgb(var(--muted))]">
+          Best first step is email. One click. No form circus. No unnecessary friction. Just the useful part.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a
+          class="inline-flex items-center justify-center rounded-full bg-[rgb(var(--accent))] px-5 py-3 text-sm font-semibold text-zinc-950 transition duration-200 hover:translate-y-[-1px] hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]"
+          href={`mailto:${profile.email}`}
+        >
+          Email me
+        </a>
+        <a
+          class="inline-flex items-center justify-center rounded-full border border-[rgba(var(--border),0.75)] bg-[rgba(var(--bg),0.28)] px-5 py-3 text-sm font-medium transition duration-200 hover:border-[rgba(var(--accent),0.4)] hover:bg-[rgba(var(--card),0.7)] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]"
+          href={profile.cvUrl}
+          download
+        >
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
