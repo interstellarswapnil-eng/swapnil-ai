@@ -139,9 +139,24 @@ const certs = [
 
 const projects = [
   {
-    title: 'Projects / demos',
-    desc: 'Links coming soon. (Swapnil will add 2–4 project tiles.)',
-    links: [],
+    title: "Wolters Kluwer — Basecone",
+    desc: "Platform context for AI-powered invoice automation and e-invoicing workflows.",
+    href: "https://www.wolterskluwer.com/en/solutions/basecone",
+  },
+  {
+    title: "Capita — Mortgage Origination Platform",
+    desc: "Legacy-to-microservices modernization context for a mortgage origination system.",
+    href: "https://www.capita.com/what-we-do/industries/financial-services/mortgage-origination-platform",
+  },
+  {
+    title: "Mercedes-Benz — MB.OS",
+    desc: "Connected services platform context (backlog, requirements, cross-geo delivery).",
+    href: "https://group.mercedes-benz.com/technology/digitalisation/operating-system/mb-os.html",
+  },
+  {
+    title: "CRIF High Mark — Credit Bureau",
+    desc: "Credit bureau platform context (workflow automation, data correction).",
+    href: "https://www.crifhighmark.com/",
   },
 ];
 ---
@@ -292,15 +307,29 @@ const projects = [
   <div class="my-10 h-px w-full bg-zinc-800/70" />
 
   <section aria-label="Projects" class="space-y-4">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Projects / demos</h2>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Projects / platforms</h2>
     <div class="grid gap-4 sm:grid-cols-2">
       {projects.map((p) => (
-        <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-4">
-          <div class="text-sm font-semibold text-zinc-100">{p.title}</div>
+        <a
+          class="group rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-4 transition hover:bg-zinc-900/45 focus:outline-none focus:ring-2 focus:ring-teal-300"
+          href={p.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="flex items-start justify-between gap-4">
+            <div class="text-sm font-semibold text-zinc-100 group-hover:text-zinc-50">{p.title}</div>
+            <div class="text-xs text-zinc-500">↗</div>
+          </div>
           <div class="mt-2 text-sm leading-relaxed text-zinc-400">{p.desc}</div>
-        </div>
+          <div class="mt-3 text-xs text-teal-300/90 underline decoration-teal-400/40 underline-offset-4 group-hover:text-teal-200">
+            View
+          </div>
+        </a>
       ))}
     </div>
+    <p class="text-xs text-zinc-500">
+      Links above point to public product/platform pages for context.
+    </p>
   </section>
 
   <div class="my-10 h-px w-full bg-zinc-800/70" />
