@@ -1,0 +1,343 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const profile = {
+  name: 'Swapnil Khalekar',
+  title: 'AI Product Manager',
+  headline: 'AI Product Manager building RAG + agentic systems that ship—and scale.',
+  summary:
+    '10+ years across enterprise SaaS, FinTech and AI automation. I lead customer-centric product execution—from discovery to delivery—specializing in RAG/agentic AI, platform modernization, and measurable outcomes.',
+  email: 'swapnibk@gmail.com',
+  linkedinUrl: 'https://www.linkedin.com/in/swapnil-khalekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+  githubUrl: 'https://github.com/interstellarswapnil-eng',
+  cvUrl: '/cv.pdf',
+};
+
+const impact = [
+  {
+    metric: '80%',
+    label: 'fewer missed automation opportunities',
+    context: 'Historical-invoice analysis automation (~90% accuracy).',
+  },
+  {
+    metric: '~5%',
+    label: 'better invoice recognition & supplier identification',
+    context: 'AI invoice processing improvements (Wolters Kluwer).',
+  },
+  {
+    metric: '~25% YoY',
+    label: 'inventory growth',
+    context: 'OTA integrations expanding Homelike supply.',
+  },
+  {
+    metric: '~15%',
+    label: 'occupancy lift',
+    context: 'A/B-tested listing + promotions improvements.',
+  },
+  {
+    metric: '~20%',
+    label: 'operating cost reduction',
+    context: 'Migration prioritization using runtime + SQL performance analysis.',
+  },
+];
+
+const focus = [
+  {
+    title: 'RAG',
+    desc: 'Retrieval strategies, evaluation, and production-ready knowledge experiences.',
+  },
+  {
+    title: 'Agentic AI',
+    desc: 'Workflow automation with guardrails, reliability, and ROI.',
+  },
+  {
+    title: 'Platform modernization',
+    desc: 'API-first systems, microservices transitions, and scalable delivery.',
+  },
+  {
+    title: 'Product thinking',
+    desc: 'Customer-first discovery, strong prioritization, and measurable outcomes.',
+  },
+];
+
+const experience = [
+  {
+    company: 'Wolters Kluwer',
+    role: 'Senior Agile Product Owner',
+    dates: 'Sep 2023 — Present',
+    location: 'Pune, India',
+    highlights: [
+      'AI invoice automation improvements (~5% recognition; ~5% processing time reduction).',
+      'Historical-invoice driven automation (80% fewer missed opportunities; ~90% accuracy).',
+      'PEPPOL integration backlog for EU e-invoicing compliance.',
+    ],
+  },
+  {
+    company: 'Homelike Internet GmbH',
+    role: 'Product Owner',
+    dates: 'Aug 2021 — Aug 2023',
+    location: 'Cologne, Germany',
+    highlights: [
+      'OTA integrations driving ~25% YoY supply growth.',
+      'A/B experiments improving occupancy ~15%.',
+      'OKRs + cross-functional alignment for scale.',
+    ],
+  },
+  {
+    company: 'ThoughtWorks',
+    role: 'Senior Business Analyst (Product Owner Proxy)',
+    dates: 'Feb 2020 — Aug 2021',
+    location: 'Pune, India',
+    highlights: [
+      'Owned backlog/requirements for Daimler MBOS connected services.',
+      'Facilitated cross-geo planning and alignment (India ↔ Germany).',
+    ],
+  },
+  {
+    company: 'Capita',
+    role: 'Business Analyst (Product Owner Proxy)',
+    dates: 'Feb 2019 — Jan 2020',
+    location: 'Pune, India',
+    highlights: ['Led microservices modernization; ~20% operating cost reduction.'],
+  },
+];
+
+const earlier = [
+  'SEED Infotech / CRIF — Business Analyst (Contractor) (Jul 2018 — Dec 2018)',
+  'Exxat Systems — Business Analyst (Aug 2016 — Jul 2018)',
+  'BlitzCode Systems — Business Analyst (Aug 2014 — Aug 2016)',
+];
+
+const skills = [
+  {
+    group: 'Product',
+    items: ['Vision', 'Roadmaps', 'Outcomes', 'Stakeholder management'],
+  },
+  {
+    group: 'AI / Data',
+    items: ['GenAI', 'ML', 'RAG', 'Evaluation', 'Responsible AI', 'ROI'],
+  },
+  {
+    group: 'Delivery',
+    items: ['SAFe', 'Scrum', 'WSJF', 'OKRs'],
+  },
+  {
+    group: 'Platform',
+    items: ['API-first', 'Integrations', 'Microservices', 'Scalability'],
+  },
+  {
+    group: 'Tools',
+    items: ['Jira', 'Miro', 'Postman', 'AWS', 'Azure', 'SQL'],
+  },
+];
+
+const certs = [
+  'CSPO',
+  'SAFe® 6 POPM',
+  'Product Space AI PM program: Top Performer + Demo Day winner',
+];
+
+const projects = [
+  {
+    title: 'Projects / demos',
+    desc: 'Links coming soon. (Swapnil will add 2–4 project tiles.)',
+    links: [],
+  },
+];
+---
+
+<Layout
+  title="Swapnil Khalekar — AI Product Manager (RAG, Agentic AI, Platform Modernization)"
+  description="AI Product Manager building RAG + agentic systems that ship—and scale."
+>
+  <section class="grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
+    <div class="space-y-5">
+      <div class="space-y-2">
+        <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">
+          {profile.name}
+        </h1>
+        <p class="text-zinc-300">
+          <span class="rounded-full border border-zinc-800/80 bg-zinc-900/40 px-3 py-1 text-sm">{profile.title}</span>
+        </p>
+      </div>
+
+      <p class="text-lg leading-relaxed text-zinc-100 sm:text-xl">
+        {profile.headline}
+      </p>
+      <p class="max-w-2xl leading-relaxed text-zinc-300">{profile.summary}</p>
+
+      <div class="flex flex-wrap gap-3 pt-2">
+        <a
+          class="inline-flex items-center justify-center rounded-md bg-teal-500 px-4 py-2 text-sm font-medium text-zinc-950 ring-1 ring-teal-400/40 transition hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
+          href={`mailto:${profile.email}`}
+        >
+          Email me
+        </a>
+        <a
+          class="inline-flex items-center justify-center rounded-md border border-zinc-800/80 bg-zinc-900/30 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-zinc-900/60 focus:outline-none focus:ring-2 focus:ring-teal-300"
+          href={profile.linkedinUrl}
+        >
+          LinkedIn
+        </a>
+        <a
+          class="inline-flex items-center justify-center rounded-md border border-zinc-800/80 bg-zinc-900/30 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-zinc-900/60 focus:outline-none focus:ring-2 focus:ring-teal-300"
+          href={profile.githubUrl}
+        >
+          GitHub
+        </a>
+        <a
+          class="inline-flex items-center justify-center rounded-md border border-zinc-800/80 bg-zinc-900/30 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-zinc-900/60 focus:outline-none focus:ring-2 focus:ring-teal-300"
+          href={profile.cvUrl}
+          download
+        >
+          Download CV
+        </a>
+      </div>
+
+      <p class="text-xs text-zinc-500">
+        Selected highlights below are approximate where marked (~).
+      </p>
+    </div>
+
+    <div class="sm:pt-2">
+      <img
+        src="/headshot.jpg"
+        alt="Headshot of Swapnil Khalekar"
+        class="h-28 w-28 rounded-2xl border border-zinc-800/80 object-cover shadow-sm shadow-black/30 sm:h-36 sm:w-36"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </section>
+
+  <div class="my-10 h-px w-full bg-zinc-800/70" />
+
+  <section aria-label="Impact" class="space-y-4">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Impact</h2>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {impact.map((c) => (
+        <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-4">
+          <div class="text-2xl font-semibold tracking-tight text-zinc-50">{c.metric}</div>
+          <div class="mt-1 text-sm text-zinc-200">{c.label}</div>
+          <div class="mt-2 text-xs leading-relaxed text-zinc-400">{c.context}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="my-10 h-px w-full bg-zinc-800/70" />
+
+  <section aria-label="Focus areas" class="space-y-4">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Focus</h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {focus.map((f) => (
+        <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-4">
+          <div class="text-sm font-semibold text-zinc-100">{f.title}</div>
+          <div class="mt-2 text-sm leading-relaxed text-zinc-400">{f.desc}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="my-10 h-px w-full bg-zinc-800/70" />
+
+  <section aria-label="Experience" class="space-y-4">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Experience</h2>
+    <div class="space-y-4">
+      {experience.map((e) => (
+        <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-4">
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <div class="text-sm font-semibold text-zinc-100">
+              {e.company} · <span class="text-zinc-300">{e.role}</span>
+            </div>
+            <div class="text-xs text-zinc-400">{e.dates} · {e.location}</div>
+          </div>
+          <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-zinc-300">
+            {e.highlights.map((h) => (
+              <li>{h}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <details class="rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-4">
+        <summary class="cursor-pointer text-sm font-medium text-zinc-200">Earlier roles</summary>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-zinc-400">
+          {earlier.map((r) => (
+            <li>{r}</li>
+          ))}
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <div class="my-10 h-px w-full bg-zinc-800/70" />
+
+  <section aria-label="Skills" class="space-y-4">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Skills & toolset</h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {skills.map((s) => (
+        <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-4">
+          <div class="text-sm font-semibold text-zinc-100">{s.group}</div>
+          <div class="mt-2 flex flex-wrap gap-2">
+            {s.items.map((it) => (
+              <span class="rounded-full border border-zinc-800/80 bg-zinc-950/30 px-3 py-1 text-xs text-zinc-300">{it}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="my-10 h-px w-full bg-zinc-800/70" />
+
+  <section aria-label="Projects" class="space-y-4">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Projects / demos</h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {projects.map((p) => (
+        <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-4">
+          <div class="text-sm font-semibold text-zinc-100">{p.title}</div>
+          <div class="mt-2 text-sm leading-relaxed text-zinc-400">{p.desc}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="my-10 h-px w-full bg-zinc-800/70" />
+
+  <section aria-label="Certifications" class="space-y-4">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Certifications & recognition</h2>
+    <ul class="list-disc space-y-1 pl-5 text-sm text-zinc-300">
+      {certs.map((c) => (
+        <li>{c}</li>
+      ))}
+    </ul>
+  </section>
+
+  <div class="my-10 h-px w-full bg-zinc-800/70" />
+
+  <section aria-label="Contact" class="space-y-4">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-300">Contact</h2>
+    <div class="rounded-xl border border-zinc-800/80 bg-zinc-900/25 p-5">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div class="text-sm text-zinc-300">
+          Best way to reach me: <span class="text-zinc-100">email</span>.
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a
+            class="inline-flex items-center justify-center rounded-md bg-teal-500 px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-300"
+            href={`mailto:${profile.email}`}
+          >
+            Email me
+          </a>
+          <a
+            class="inline-flex items-center justify-center rounded-md border border-zinc-800/80 bg-zinc-900/30 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-zinc-900/60 focus:outline-none focus:ring-2 focus:ring-teal-300"
+            href={profile.cvUrl}
+            download
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>

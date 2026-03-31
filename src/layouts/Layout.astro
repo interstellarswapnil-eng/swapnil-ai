@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Swapnil Khalekar — AI Product Manager',
+  description = 'AI Product Manager building RAG + agentic systems that ship—and scale.',
+  ogImage = '/og.png',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preload" as="image" href="/headshot.jpg" />
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-teal-500/30 selection:text-zinc-50">
+    <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-zinc-900 focus:px-3 focus:py-2 focus:text-sm focus:ring-2 focus:ring-teal-400">Skip to content</a>
+    <div class="min-h-dvh">
+      <main id="content" class="mx-auto w-full max-w-5xl px-5 py-10 sm:px-8 sm:py-14">
+        <slot />
+      </main>
+      <footer class="border-t border-zinc-800/70">
+        <div class="mx-auto w-full max-w-5xl px-5 py-10 text-sm text-zinc-400 sm:px-8">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <span class="text-zinc-300">Swapnil Khalekar</span> · Pune, India
+            </div>
+            <div class="flex gap-4">
+              <a class="hover:text-zinc-200" href="mailto:swapnibk@gmail.com">Email</a>
+              <a class="hover:text-zinc-200" href="https://www.linkedin.com/in/swapnil-khalekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+              <a class="hover:text-zinc-200" href="https://github.com/interstellarswapnil-eng">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

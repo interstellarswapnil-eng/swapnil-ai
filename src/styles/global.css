@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+/* Slightly nicer default text rendering */
+html {
+  text-rendering: optimizeLegibility;
+}
