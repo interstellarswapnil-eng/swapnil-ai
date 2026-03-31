@@ -28,26 +28,76 @@ const {
 
     <link rel="preload" as="image" href="/headshot.jpg" />
   </head>
-  <body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-teal-500/30 selection:text-zinc-50">
-    <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-zinc-900 focus:px-3 focus:py-2 focus:text-sm focus:ring-2 focus:ring-teal-400">Skip to content</a>
+  <body class="bg-[rgb(var(--bg))] text-[rgb(var(--fg))] antialiased selection:bg-[rgba(var(--accent),0.25)] selection:text-[rgb(var(--fg))]">
+    <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-[rgb(var(--card))] focus:px-3 focus:py-2 focus:text-sm focus:ring-2 focus:ring-[rgb(var(--accent))]">Skip to content</a>
+
     <div class="min-h-dvh">
+      <div class="mx-auto w-full max-w-5xl px-5 pt-6 sm:px-8">
+        <div class="flex items-center justify-end">
+          <button
+            id="theme-toggle"
+            type="button"
+            class="inline-flex items-center gap-2 rounded-md border border-[rgb(var(--border))] bg-[rgba(var(--card),0.35)] px-3 py-2 text-xs font-medium text-[rgb(var(--fg))] hover:bg-[rgba(var(--card),0.6)] focus:outline-none focus:ring-2 focus:ring-[rgb(var(--accent))]"
+            aria-label="Toggle theme"
+          >
+            <span id="theme-icon" aria-hidden="true">◐</span>
+            <span id="theme-label">Theme</span>
+          </button>
+        </div>
+      </div>
+
       <main id="content" class="mx-auto w-full max-w-5xl px-5 py-10 sm:px-8 sm:py-14">
         <slot />
       </main>
-      <footer class="border-t border-zinc-800/70">
-        <div class="mx-auto w-full max-w-5xl px-5 py-10 text-sm text-zinc-400 sm:px-8">
+      <footer class="border-t border-[rgba(var(--border),0.7)]">
+        <div class="mx-auto w-full max-w-5xl px-5 py-10 text-sm text-[rgb(var(--muted))] sm:px-8">
           <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <span class="text-zinc-300">Swapnil Khalekar</span> · Pune, India
+              <span class="text-[rgb(var(--fg))]">Swapnil Khalekar</span> · Pune, India
             </div>
             <div class="flex gap-4">
-              <a class="hover:text-zinc-200" href="mailto:swapnibk@gmail.com">Email</a>
-              <a class="hover:text-zinc-200" href="https://www.linkedin.com/in/swapnil-khalekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
-              <a class="hover:text-zinc-200" href="https://github.com/interstellarswapnil-eng">GitHub</a>
+              <a class="hover:opacity-90" href="mailto:swapnibk@gmail.com">Email</a>
+              <a class="hover:opacity-90" href="https://www.linkedin.com/in/swapnil-khalekar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+              <a class="hover:opacity-90" href="https://github.com/interstellarswapnil-eng">GitHub</a>
             </div>
           </div>
         </div>
       </footer>
     </div>
+
+    <script is:inline>
+      (() => {
+        const storageKey = 'theme';
+        const root = document.documentElement;
+        const btn = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+
+        const systemPrefersLight = () =>
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+
+        const getInitialTheme = () => {
+          const saved = localStorage.getItem(storageKey);
+          if (saved === 'light' || saved === 'dark') return saved;
+          return systemPrefersLight() ? 'light' : 'dark';
+        };
+
+        const apply = (theme) => {
+          if (theme === 'light') root.setAttribute('data-theme', 'light');
+          else root.removeAttribute('data-theme');
+          if (icon) icon.textContent = theme === 'light' ? '☀' : '☾';
+          if (label) label.textContent = theme === 'light' ? 'Light' : 'Dark';
+        };
+
+        const current = getInitialTheme();
+        apply(current);
+
+        btn?.addEventListener('click', () => {
+          const next = (root.getAttribute('data-theme') === 'light') ? 'dark' : 'light';
+          localStorage.setItem(storageKey, next);
+          apply(next);
+        });
+      })();
+    </script>
   </body>
 </html>
